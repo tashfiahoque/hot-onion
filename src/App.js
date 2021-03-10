@@ -1,25 +1,44 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import Header from './Components/Header/Header';
+import { createContext } from 'react';
+import { useState } from 'react';
+import SelectedItem from './Components/SelectedItem/SelectedItem';
+import NotFound from './Components/NotFound/NotFound';
+
+
+
+export const categoryContext = createContext();
 
 function App() {
+  const [category, setCategory] = useState('breakfast', 'price');
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <categoryContext.Provider value={[category, setCategory]}>
+      <Router>
+        <Switch>
+          <Route path="/home">
+            <Header></Header>
+          </Route>
+          <Route path="/fooditem/:id">
+            <SelectedItem />
+          </Route>
+          <Route exact path="/">
+            <Header />
+          </Route>
+          <Route path="*">
+            <NotFound />
+          </Route>
+        </Switch>
+      </Router>
+    </categoryContext.Provider>
+
   );
 }
 

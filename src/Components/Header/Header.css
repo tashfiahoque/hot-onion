@@ -1,0 +1,77 @@
+.logo img{
+    width: 30%;
+}
+.menu ul li a{
+    font-size: 12px;
+    color: black !important;
+    padding: 3px 10px !important;
+    border-radius: 20px;
+    transition: 0.5s;
+    
+}
+.menu ul li a:hover{
+    background-color: #f05c5c;
+    color: #fff !important;
+}
+.navbar-light .navbar-nav .nav-item.active .nav-link{
+    background-color: #f05c5c;  
+    color: #fff;
+}
+.banner{
+    background-image: url('./bannerbackground.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.banner h1{
+    font-weight: 700;
+    font-size: 25px;
+    color: black;
+    padding-top: 120px;
+    padding-bottom: 210px;
+}
+.menu-2{
+    margin: 20px 0px;
+}
+.menu-2 li{
+    cursor: pointer;
+    padding: 20px;
+}
+.nav-item, .icon2{
+    cursor: pointer;
+    position: relative;
+}
+.nav-item span{
+    position: absolute;
+    top:-7px;
+    right: 3px;
+    background: crimson;
+    font-size: 10px;
+    color: white;
+    padding: 3px 5px;
+    border-radius: 50%;
+    z-index: -1;
+}
+div {
+    overflow-x: hidden;
+}
+.single-item {
+    transition: .5s;
+    cursor: pointer;
+}
+.single-item:hover {
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
+}
+.card {
+    border: none;
+}
+.card-body {
+    padding-bottom: 0;
+}
+.card-img-top {
+    width: 75%;
+    margin: 0 auto;
+}
+.card-title, .price {
+    font-size: 14px;
+}
