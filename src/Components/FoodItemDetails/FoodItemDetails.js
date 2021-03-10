@@ -1,6 +1,6 @@
-import React, { useContext, useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { categoryContext } from '../../App';
+
 
 const FoodItemDetails = (props) => {
     const { title, avatar, subtitle, price, id } = props.foodgroup;

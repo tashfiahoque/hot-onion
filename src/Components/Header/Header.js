@@ -3,11 +3,10 @@ import './Header.css';
 import logo2 from './logo2.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
-import { useState } from 'react';
 import { useContext } from 'react';
 import { categoryContext } from '../../App';
 import FoodItems from '../FoodItems/FoodItems';
-import { Link } from 'react-router-dom';
+
 
 const Header = () => {
     const [category, setCategory] = useContext(categoryContext);
@@ -16,7 +15,7 @@ const Header = () => {
         <>
             <div className="container">
                 <nav className="navbar navbar-expand-lg">
-                    <a className="navbar-brand logo"><img src={logo2} alt=""/></a>
+                    <a className="navbar-brand logo" href="#"><img src={logo2} alt="" /></a>
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
@@ -39,7 +38,7 @@ const Header = () => {
                 <div className="row">
                     <div className="col-md-12">
                         <h1 className="text-center">Best Food Waiting For Your Belly</h1>
-                    </div>      
+                    </div>
                 </div>
             </section>
             <section className="menu-2">
@@ -48,16 +47,16 @@ const Header = () => {
                     <li class="nav-item" onClick={() => setCategory('lunch')}>Lunch</li>
                     <li class="nav-item" onClick={() => setCategory('dinner')}>Dinner</li>
                 </ul>
-            </section> 
+            </section>
             <div className="container px-2">
                 <div className="row">
                     <div className="col-md-12 row">
-                        <FoodItems/>
-                     </div>
-                 </div>
-                 <button className="btn btn-sm btn-primary text-center">Proceed Check Out</button> 
-            </div>  
-        </>              
+                        <FoodItems />
+                    </div>
+                </div>
+                <button className="btn btn-sm btn-primary text-center">Proceed Check Out</button>
+            </div>
+        </>
     );
 };
 
